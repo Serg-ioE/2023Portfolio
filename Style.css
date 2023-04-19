@@ -39,3 +39,6 @@ html {
 button.navbar-toggler {
     margin:auto;
 }
+.navexpanded {
+    z-index: 2;
+}

@@ -1,23 +1,31 @@
 .navRight {
-    margin-left:auto;
+    margin-left: auto;
 }
+
 .navColor {
     background-color: #191919;
 }
-a.navbar-brand,ul.fullWidth.navbar-nav > li,a.nav-link.active, .fullWidth.navbar-nav .nav-link.active {
+
+a.navbar-brand,
+ul.fullWidth.navbar-nav>li,
+a.nav-link.active,
+.fullWidth.navbar-nav .nav-link.active {
     color: white;
     vertical-align: middle;
 }
+
 .fullWidth {
     width: auto;
 }
+
 body,
 html {
     height: 100%;
 }
+
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Imgs/code.gif");
-    height: 85vh;
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -33,12 +41,29 @@ html {
     transform: translate(-50%, -50%);
     color: white;
 }
+
 #flexGrowNo {
     flex-grow: 0;
 }
+
 button.navbar-toggler {
-    margin:auto;
+    margin: auto;
 }
+
 .navexpanded {
     z-index: 2;
 }
+:not (div) {
+
+}
+
+@media screen and (max-width: 768px) {
+    .hero-text {
+            text-align: center;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+        }   

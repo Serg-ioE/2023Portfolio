@@ -51,10 +51,12 @@ button.navbar-toggler {
 }
 
 .navexpanded {
-    z-index: 2;
-}
-:not (div) {
-
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 100;
+    text-align: center;
+    display: show;
 }
 
 @media screen and (max-width: 768px) {
@@ -66,4 +68,7 @@ button.navbar-toggler {
             transform: translate(-50%, -50%);
             color: white;
         }
-        }   
+    .navexpanded {
+        display: none;
+    }
+}   

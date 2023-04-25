@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" href="Style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,9 +13,9 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <nav class="navColor navbar navbar-expand-sm">
+    <nav class="navColor navbar navbar-expand-sm" id="navShow">
         <div class="container-fluid" style="color:white;">
-            <span class="collapse navbar-collapse"><a class="navbar-brand" href="#">Navbar</a></span>
+            <span class="collapse navbar-collapse"><button class="navbar-button">Random Webpage</button></span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="">
                 <i class="fa-solid fa-angles-down" style="color: white"></i>
@@ -65,6 +64,9 @@
             <li class="nav-link active">
                 <a class="nav-link active" href="contact.html">Contact</a>
             </li>
+            <li class="nav-link active">
+                <button class="navbar-button">Random Webpage</button>
+            </li>
         </ul>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="">
@@ -73,7 +75,7 @@
     </div>
     <div class="hero-image">
         <div class="hero-text">
-            <h1>I am John Doe</h1>
+            <h1>This is Index</h1>
             <p>And I'm a Photographer</p>
         </div>
     </div>

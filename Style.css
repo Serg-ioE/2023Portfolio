@@ -55,6 +55,10 @@ button.navbar-toggler {
     height: auto;
 }
 
+.navexpanded button.navbar-toggler {
+    transform: rotate(180deg);
+}
+
 .navexpanded {
     position: absolute;
     left: 0px;
@@ -72,6 +76,27 @@ nav {
         right: 0px;
         top: 0px;
         z-index: 100;
+}
+.navImg {
+    max-width: 150%;
+    height: auto;
+    border-radius: 50%;
+}
+.navbar-button {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #080060;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-button:hover {
+    background-color: #040030;
 }
 @media screen and (max-width: 576px) {
     .hero-text {

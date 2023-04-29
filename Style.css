@@ -1,6 +1,4 @@
-.navRight {
-    margin-left: auto;
-}
+
 
 .navColor {
     background-color: #080060;
@@ -14,8 +12,24 @@ a.nav-link.active,
     vertical-align: middle;
 }
 
+.navexpanded .navbar-toggler{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+ul.fullWidth.navbar-nav>li {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .fullWidth {
     width: auto;
+}
+
+ul.fullWidth.navbar-nav {
+    flex-wrap: wrap;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 body,
@@ -56,7 +70,8 @@ button.navbar-toggler {
 }
 
 .navexpanded button.navbar-toggler {
-    transform: rotate(180deg);
+    transform: rotate(180deg) scale(500%, 500%);
+    opacity: 1;
 }
 
 .navexpanded {
@@ -67,21 +82,24 @@ button.navbar-toggler {
     bottom: 0px;
     z-index: 100;
     text-align: center;
-    display: show;
+    justify-content: center;
     opacity: 0.8;
 }
+
 nav {
     position: absolute;
-        left: 0px;
-        right: 0px;
-        top: 0px;
-        z-index: 100;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 100;
 }
+
 .navImg {
     max-width: 150%;
     height: auto;
     border-radius: 50%;
 }
+
 .navbar-button {
     color: #fff;
     font-size: 16px;
@@ -98,20 +116,28 @@ nav {
 .navbar-button:hover {
     background-color: #040030;
 }
+
 @media screen and (max-width: 576px) {
     .hero-text {
-            text-align: center;
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 10vw;
-        }
+        text-align: center;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 10vw;
+    }
+
     div.hero-text h1 {
         font-size: 12vw !important;
     }
+
     .navexpanded {
         display: none;
     }
-}   
+}
+.flex-tape {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}

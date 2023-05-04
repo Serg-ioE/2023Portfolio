@@ -1,6 +1,4 @@
-.navRight {
-    margin-left: auto;
-}
+
 
 .navColor {
     background-color: #080060;
@@ -14,8 +12,24 @@ a.nav-link.active,
     vertical-align: middle;
 }
 
+.navexpanded .navbar-toggler{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+ul.fullWidth.navbar-nav>li {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .fullWidth {
     width: auto;
+}
+
+ul.fullWidth.navbar-nav {
+    flex-wrap: wrap;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 body,
@@ -34,12 +48,15 @@ html {
 
 /* Place text in the middle of the image */
 .hero-text {
-    text-align: center;
+    text-align: left;
     position: absolute;
     top: 35%;
     left: 10%;
     color: white;
     font-size: 4vw;
+    font-family: "noka", sans-serif;
+        font-weight: 600;
+        font-style: normal;
 }
 
 div.hero-text h1 {
@@ -53,6 +70,12 @@ div.hero-text h1 {
 button.navbar-toggler {
     margin: auto;
     height: auto;
+    transform: scale(150%, 150%);
+}
+
+.navexpanded button.navbar-toggler {
+    transform: rotate(180deg) scale(500%, 500%);
+    opacity: 1;
 }
 
 .navexpanded {
@@ -63,30 +86,188 @@ button.navbar-toggler {
     bottom: 0px;
     z-index: 100;
     text-align: center;
-    display: show;
+    justify-content: center;
     opacity: 0.8;
 }
+
 nav {
     position: absolute;
-        left: 0px;
-        right: 0px;
-        top: 0px;
-        z-index: 100;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 100;
 }
+
+a.nav-link.active {
+    font-size: 23px;
+}
+
+.navbar-collapse {
+    font-size: 1rem;
+}
+
+.navImg {
+    max-width: 150%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.navbar-button {
+    color: #fff;
+    font-size: 23px;
+    font-weight: bold;
+    background-color: #080060;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-button:hover {
+    background-color: #040030;
+}
+.flex-tape {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+#h1IndexContent {
+    font-family: "new-order", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 4vw !important;
+}
+#pIndexContent {
+    font-family: "ofelia-display", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    font-size: 2vw !important;
+}
+
+.content-area {
+    background-color: #21005D;
+    color: white;
+}
+
+img[alt="TipCalcSS"] {
+    max-height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.indexImg {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    background-color: #2C2C2C;
+    color: white;
+    height: auto;
+}
+
+a.active[type="footer"] {
+    text-decoration: none;
+    color: white;
+    font-size: 1.15rem;
+}
+
+.footerImages {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.footerImgContainer1 {
+    position: relative;
+    margin: auto;
+    width: 90%;
+    padding-bottom: 90%;
+}
+.footerImgContainer2 {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.footerImages[alt="Gmail logo"] {
+    border-radius: 0% !important;
+}
+
+.footSectorContent {
+    padding: 0%;
+    text-align: center;
+    min-width: calc(576px / 7);
+}
+
+.flex-tape-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+#last-nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media screen and (max-width: 576px) {
     .hero-text {
-            text-align: center;
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 10vw;
-        }
+        text-align: center;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 10vw;
+    }
+
     div.hero-text h1 {
         font-size: 12vw !important;
     }
+
     .navexpanded {
         display: none;
     }
-}   
+
+    img[alt="TipCalcSS"] {
+        max-height: 25vh;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .indexImg {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #pIndexContent {
+        font-family: "ofelia-display", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem !important;
+        text-align: center;
+    }
+        
+    #h1IndexContent {
+        font-family: "new-order", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 3rem !important;
+        text-align: center;
+    }
+
+    .footSectorContent {
+        min-width: none;
+        width: fit-content;
+    }
+
+    #last-nav {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

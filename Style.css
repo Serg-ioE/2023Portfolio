@@ -1,4 +1,6 @@
-
+.no-scroll {
+    overflow: hidden;
+}
 
 .navColor {
     background-color: #080060;
@@ -98,10 +100,6 @@ nav {
     z-index: 100;
 }
 
-a.nav-link.active {
-    font-size: 23px;
-}
-
 .navbar-collapse {
     font-size: 1rem;
 }
@@ -114,7 +112,6 @@ a.nav-link.active {
 
 .navbar-button {
     color: #fff;
-    font-size: 23px;
     font-weight: bold;
     background-color: #080060;
     border: none;
@@ -139,11 +136,28 @@ a.nav-link.active {
         font-style: normal;
         font-size: 4vw !important;
 }
-#pIndexContent {
+.pIndexContent {
     font-family: "ofelia-display", sans-serif;
         font-weight: 400;
         font-style: normal;
     font-size: 2vw !important;
+}
+
+.imgCaption {
+    position: absolute;
+        bottom: 20%;
+        right: 15%;
+    transform: rotate(15deg);
+}
+
+.captionArrow {
+    max-width: 25%;
+    max-height: auto;
+    filter: invert(100%);
+    position: absolute;
+        bottom: 2%;
+        right: 20%;
+    transform: rotate(50deg);
 }
 
 .content-area {
@@ -164,56 +178,15 @@ img[alt="TipCalcSS"] {
     align-items: center;
 }
 
-.footer {
-    background-color: #2C2C2C;
-    color: white;
-    height: auto;
-}
-
-a.active[type="footer"] {
+.footer-notlink {
     text-decoration: none;
-    color: white;
-    font-size: 1.15rem;
-}
-
-.footerImages {
-    max-width: 100%;
-    object-fit: cover;
-}
-
-.footerImgContainer1 {
-    position: relative;
-    margin: auto;
-    width: 90%;
-    padding-bottom: 90%;
-}
-.footerImgContainer2 {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 50%;
-}
-
-.footerImages[alt="Gmail logo"] {
-    border-radius: 0% !important;
-}
-
-.footSectorContent {
-    padding: 0%;
-    text-align: center;
-    min-width: calc(576px / 7);
-}
-
-.flex-tape-footer {
-    display: flex;
-    flex-direction: column;
-}
-
-#last-nav {
-    margin-left: auto;
-    margin-right: auto;
 }
 
 @media screen and (max-width: 576px) {
+    .imgCaption, .captionArrow{
+        display: none;
+    }
+    
     .hero-text {
         text-align: center;
         position: relative;
@@ -245,7 +218,7 @@ a.active[type="footer"] {
         align-items: center;
     }
 
-    #pIndexContent {
+    .pIndexContent {
         font-family: "ofelia-display", sans-serif;
         font-weight: 400;
         font-style: normal;

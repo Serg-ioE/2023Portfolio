@@ -1,49 +1,50 @@
+// V V V Used for custom Responsiveness based on viewport size!
+function navHeightResize() {
+  let viewportHeight = $(window).height();
+  let navbar = $("#navbar").outerHeight(true);
+  let heroHeight;
+  if (navbar = 0) {
+    heroHeight = viewportHeight;
+  } else {
+    heroHeight = viewportHeight - navbar;
+    $(".hero-image").height(heroHeight);
+  }
+}
+
 $(document).ready(function () {
   // V V Controls the navbar hiding and showing with the correct Css
   $(".navexpanded").hide();
 
-  var decider = false; // false = navexpanded is closed, true = navexpanded is open
+  var navDecider = false; // false = navexpanded is closed, true = navexpanded is open
 
   $(".navbar-toggler").click(function () {
     $(".navexpanded").slideToggle();
-    decider = !decider;
+    navDecider = !navDecider;
     $(".navexpanded").css("display", "flex");
-    if (decider == true) {
+    if (navDecider == true) {
       $("#navbar-toggler-navexpanded").css("margin-left", "20%");
       $("#navbar-toggler-navexpanded").css("margin-right", "20%");
-      console.log("navbar worked?");
       console.log($("#navbar-toggler-navexpanded").css("margin"));
+
+      $("body").addClass("no-scroll"); // Removes ability to scroll
+    } else {
+      $("body").removeClass("no-scroll"); // Adds back the ability to scroll
     }
 
     $(".navbar").slideToggle();
+    navHeightResize();
+
+
   });
-  // ^ ^ Controls the Navbar hiding and showing with the correct Css
 
+  $(window).on("resize", function () {
+    // V V Navbar Height Responsiveness
+    navHeightResize();
+  });
 
-$(window).on("resize", function () {
+  $(window).trigger("resize");
 
-  // V V Navbar Height responsivness
-  const viewportHeight = $(window).height();
-  const navbar = $("#navbar").outerHeight(true);
-  const heroHeight = viewportHeight - navbar;
-  $(".hero-image").height(heroHeight);
-
-  // V V Footer Width responsivness
-  var footNav = $("#footNav");
-  var windowWidth = $("body").width();
-  var newWidth;
-  if (windowWidth <= 576) {
-    newWidth = footNav.width() / 2;
-  } else {
-    newWidth = footNav.width() / 7;
-  }
-  $(".footSectorContent").css("width", newWidth);
-});
-
-$(window).trigger("resize");
-
-
-
+  // V V Random Page Button
   var prevPage;
 
   $(".navbar-button").click(function () {
@@ -85,5 +86,3 @@ $(window).trigger("resize");
     prevPage = page;
   });
 });
-
-

@@ -29,10 +29,7 @@
 
   <body>
     <div class="flex-tape">
-      <nav
-        class="navColor navbar navbar-expand-sm"
-        id="navbar"
-      >
+      <nav class="navColor navbar navbar-expand-sm" id="navbar">
         <div class="container-fluid" style="color: white">
           <span class="collapse navbar-collapse">
             <button class="navbar-button">Random Webpage</button>
@@ -130,9 +127,10 @@
     </div>
     <div class="container-fluid content-area">
       <div class="row">
-        <div class="col-sm-6" style="position: relative;">
+        <div class="col-sm-6" label="text content area" style="overflow: hidden;">
+          <div id="pIndexContentDiv">
             <h1 class="my-5" id="h1IndexContent">What is this place?</h1>
-            <p class="my-5 pIndexContent">
+            <p class="mt-5 pIndexContent">
               Hi I’m Sergio Espinal and this is my 2023 portfolio website. In this
               website I work on homing in on my skills while simultaneously
               completing a project. I talk about myself, the college I will likely
@@ -140,8 +138,13 @@
               for the rest of my webpages so I put in some of my best effort into
               the website.
             </p>
-            <p class="imgCaption pIndexContent">This is one of my projects</p>
-            <img class="captionArrow" src="Imgs/arrow-icon-arrows-sign-black-arrows-free-png.webp" alt="arrow">
+          </div>
+          <div class="captionDivIndex">
+            <div class="captionWrapperIndex" style="text-align: right;">
+              <p class="imgCaption pIndexContent">This is one of my projects</p>
+              <img class="captionArrow" src="Imgs/arrow-icon-arrows-sign-black-arrows-free-png.webp" alt="arrow" />
+            </div>
+          </div>
         </div>
         <div class="col-sm-6 indexImg">
           <img src="Imgs/TipCalcSS.png" alt="TipCalcSS" />
@@ -149,122 +152,125 @@
       </div>
     </div>
     <!-- Remove the container if you want to extend the Footer to full width. -->
-      <!-- Footer -->
-      <footer class="text-center text-lg-start text-white" style="background-color: #2c2c2c">
-        <!-- Grid container -->
-        <div class="container p-4 pb-0">
-          <!-- Section: Links -->
-          <section>
-            <!--Grid row-->
-            <div class="row">
-              <!-- Grid column -->
-              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">
-                  What is this place?
-                </h6>
-                <p>
-                  Hi I’m Sergio Espinal and this is my 2023 portfolio website. In this
-                  website I work on homing in on my skills while simultaneously
-                  completing a project. I talk about myself, the college I will likely
-                  be going to, and my past works.
-                </p>
-              </div>
-              <!-- Grid column -->
-    
-              <hr class="w-100 clearfix d-md-none" />
-    
-              <!-- Grid column -->
-              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Languages and libraries used</h6>
-                <p>
-                  <a class="text-white footer-notlink">HTML</a>
-                </p>
-                <p>
-                  <a class="text-white footer-notlink">CSS</a>
-                </p>
-                <p>
-                  <a class="text-white footer-notlink">Javascript</a>
-                </p>
-                <p>
-                  <a class="text-white footer-notlink">Bootstrap</a>
-                </p>
-                <p>
-                  <a class="text-white footer-notlink">Jquery</a>
-                </p>
-                <p>
-                  <a class="text-white footer-notlink">Vue Js</a>
-                </p>
-              </div>
-              <!-- Grid column -->
-    
-              <hr class="w-100 clearfix d-md-none" />
-    
-              <!-- Grid column -->
-              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">
-                  Pages
-                </h6>
-                <p>
-                  <a href="index.html" class="text-white">Home</a>
-                </p>
-                <p>
-                  <a href="about.html" class="text-white">About</a>
-                </p>
-                <p>
-                  <a href="Education.html" class="text-white">Education</a>
-                </p>
-                <p>
-                  <a href="work.html" class="text-white">Work</a>
-                </p>
-                <p>
-                  <a href="interests.html" class="text-white">Interests</a>
-                </p>
-                <p>
-                  <a href="contact.html" class="text-white">Contact</a>
-                </p>
-                <p>
-                  <a href="quickMaths.html" class="text-white">Quick Maths</a>
-                </p>
-              </div>
-    
-              <!-- Grid column -->
-              <hr class="w-100 clearfix d-md-none" />
-    
-              <!-- Grid column -->
-              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                <p><i class="fas fa-home mr-3"></i> New Jersey, USA, Earth</p>
-                <p><i class="fas fa-envelope mr-3"></i> espinalJrs@gmail.com</p>
-                <p><i class="fas fa-phone mr-3"></i> 800 888 8888</p>
-                <p><i class="fas fa-code mr-3"></i> Serg-ioE</p>
-              </div>
-              <!-- Grid column -->
+    <!-- Footer -->
+    <footer
+      class="text-center text-lg-start text-white"
+      style="background-color: #2c2c2c"
+    >
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section>
+          <!--Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                What is this place?
+              </h6>
+              <p>
+                Hi I’m Sergio Espinal and this is my 2023 portfolio website. In
+                this website I work on homing in on my skills while
+                simultaneously completing a project. I talk about myself, the
+                college I will likely be going to, and my past works.
+              </p>
             </div>
-            <!--Grid row-->
-          </section>
-          <!-- Section: Links -->
-    
-          <hr class="my-3">
-    
-          <!-- Section: Copyright -->
-          <section class="p-3 pt-0">
-            <div class="row d-flex align-items-center">
-              <!-- Grid column -->
-              <div class="col-md-12 col-lg-12 text-center text-md-start">
-                <!-- Copyright -->
-                <div class="p-3">
-                  © 2020 Copyright:
-                  <a class="text-white">MDBootstrap.com</a>
-                </div>
-                <!-- Copyright -->
-              </div>
+            <!-- Grid column -->
+
+            <hr class="w-100 clearfix d-md-none" />
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                Languages and libraries used
+              </h6>
+              <p>
+                <a class="text-white footer-notlink">HTML</a>
+              </p>
+              <p>
+                <a class="text-white footer-notlink">CSS</a>
+              </p>
+              <p>
+                <a class="text-white footer-notlink">Javascript</a>
+              </p>
+              <p>
+                <a class="text-white footer-notlink">Bootstrap</a>
+              </p>
+              <p>
+                <a class="text-white footer-notlink">Jquery</a>
+              </p>
+              <p>
+                <a class="text-white footer-notlink">Vue Js</a>
+              </p>
             </div>
-          </section>
-          <!-- Section: Copyright -->
-        </div>
-        <!-- Grid container -->
-      </footer>
-      <!-- Footer -->
+            <!-- Grid column -->
+
+            <hr class="w-100 clearfix d-md-none" />
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Pages</h6>
+              <p>
+                <a href="index.html" class="text-white">Home</a>
+              </p>
+              <p>
+                <a href="about.html" class="text-white">About</a>
+              </p>
+              <p>
+                <a href="Education.html" class="text-white">Education</a>
+              </p>
+              <p>
+                <a href="work.html" class="text-white">Work</a>
+              </p>
+              <p>
+                <a href="interests.html" class="text-white">Interests</a>
+              </p>
+              <p>
+                <a href="contact.html" class="text-white">Contact</a>
+              </p>
+              <p>
+                <a href="quickMaths.html" class="text-white">Quick Maths</a>
+              </p>
+            </div>
+
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none" />
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+              <p><i class="fas fa-home mr-3"></i> New Jersey, USA, Earth</p>
+              <p><i class="fas fa-envelope mr-3"></i> espinalJrs@gmail.com</p>
+              <p><i class="fas fa-phone mr-3"></i> 800 888 8888</p>
+              <p><i class="fas fa-code mr-3"></i> Serg-ioE</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+
+        <hr class="my-3" />
+
+        <!-- Section: Copyright -->
+        <section class="p-3 pt-0">
+          <div class="row d-flex align-items-center">
+            <!-- Grid column -->
+            <div class="col-md-12 col-lg-12 text-center text-md-start">
+              <!-- Copyright -->
+              <div class="p-3">
+                © 2020 Copyright:
+                <a class="text-white">MDBootstrap.com</a>
+              </div>
+              <!-- Copyright -->
+            </div>
+          </div>
+        </section>
+        <!-- Section: Copyright -->
+      </div>
+      <!-- Grid container -->
+    </footer>
+    <!-- Footer -->
     <script src="main.js"></script>
   </body>
 </html>

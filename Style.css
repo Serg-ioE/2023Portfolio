@@ -135,6 +135,7 @@ nav {
         font-weight: 700;
         font-style: normal;
         font-size: 4vw !important;
+    margin-top: 0 !important;
 }
 .pIndexContent {
     font-family: "ofelia-display", sans-serif;
@@ -143,21 +144,33 @@ nav {
     font-size: 2vw !important;
 }
 
+#pIndexContentDiv{
+    margin-top: 3.25%;
+    margin-bottom: 3.25%;
+    height: auto;
+}
+
+.captionDivIndex {
+    height: 100%;
+    position: relative;
+}
+
 .imgCaption {
-    position: absolute;
-        bottom: 20%;
-        right: 15%;
-    transform: rotate(15deg);
+    text-align: right;
 }
 
 .captionArrow {
-    max-width: 25%;
-    max-height: auto;
+    max-width: 40%;
     filter: invert(100%);
-    position: absolute;
-        bottom: 2%;
-        right: 20%;
     transform: rotate(50deg);
+    margin-left: auto;
+}
+
+.captionWrapperIndex {
+    max-width: 50%;
+    position: absolute;
+        bottom: 7.5%;
+        right: 7.5%;
 }
 
 .content-area {

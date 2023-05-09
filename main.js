@@ -11,8 +11,23 @@ function navHeightResize() {
   }
 }
 
+function pageTransition() {
+  var transDivDimensions = Math.sqrt(
+    Math.pow($(window).height(), 2) + Math.pow($(window).width(), 2)
+  ); // Uses the pythagorean theorem to calculate the dimensions of the div to perfectly cover the screen (because it is on a 45 degree angle)
+  $(".transition-div").width(transDivDimensions);
+  $(".transition-div").height(transDivDimensions);
+  $(".transition-div").hide();
+  $("body").css("overflow", "hidden");
+  $(".transition-div").slideToggle();
+  setTimeout(function () {
+    $(".transition-div").slideToggle();
+  }, 2000);
+}
+
 $(document).ready(function () {
   // V V Controls the navbar hiding and showing with the correct Css
+  $(".transition-div").show();
   $(".navexpanded").hide();
 
   var navDecider = false; // false = navexpanded is closed, true = navexpanded is open
@@ -50,7 +65,6 @@ $(document).ready(function () {
       console.log("Working");
       return indexCaptionDivHeightPercent + "%";
     });
-    
   });
 
   $(window).trigger("resize");
@@ -59,41 +73,45 @@ $(document).ready(function () {
   var prevPage;
 
   $(".navbar-button").click(function () {
-    var page = Math.floor(Math.random() * 7);
-    while (prevPage == page) {
-      page = Math.floor(Math.random() * 7);
-      console.log("it was the same this amount of times");
-    }
-    switch (page) {
-      case 0:
-        window.location.href = "index.html";
-        console.log("index");
-        break;
-      case 1:
-        window.location.href = "about.html";
-        console.log("about");
-        break;
-      case 2:
-        window.location.href = "education.html";
-        console.log("education");
-        break;
-      case 3:
-        window.location.href = "work.html";
-        console.log("work");
-        break;
-      case 4:
-        window.location.href = "interests.html";
-        console.log("interests");
-        break;
-      case 5:
-        window.location.href = "contact.html";
-        console.log("contact");
-        break;
-      case 6:
-        window.location.href = "quickMaths.html";
-        console.log("quickMaths");
-        break;
-    }
-    prevPage = page;
+    pageTransition();
+
+    setTimeout(function () {
+      var page = Math.floor(Math.random() * 7);
+      while (prevPage == page) {
+        page = Math.floor(Math.random() * 7);
+        console.log("it was the same this amount of times");
+      }
+      switch (page) {
+        case 0:
+          window.location.href = "index.html";
+          console.log("index");
+          break;
+        case 1:
+          window.location.href = "about.html";
+          console.log("about");
+          break;
+        case 2:
+          window.location.href = "education.html";
+          console.log("education");
+          break;
+        case 3:
+          window.location.href = "work.html";
+          console.log("work");
+          break;
+        case 4:
+          window.location.href = "interests.html";
+          console.log("interests");
+          break;
+        case 5:
+          window.location.href = "contact.html";
+          console.log("contact");
+          break;
+        case 6:
+          window.location.href = "quickMaths.html";
+          console.log("quickMaths");
+          break;
+      }
+      prevPage = page;
+    }, 3000);
   });
 });

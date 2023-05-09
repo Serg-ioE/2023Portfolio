@@ -1,3 +1,7 @@
+.transition-div {
+    z-index: 9999999999999999999999;
+}
+
 .no-scroll {
     overflow: hidden;
 }

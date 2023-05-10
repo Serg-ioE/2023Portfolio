@@ -1,5 +1,10 @@
 .transition-div {
-    z-index: 9999999999999999999999;
+    position: fixed;
+        top: 0%;
+        left: 0%;
+    z-index: 9999999999999999999999 !important;
+    transform: rotate(-45deg);
+    background-color: #21005D;
 }
 
 .no-scroll {

@@ -1,3 +1,4 @@
+
 // V V V Used for custom Responsiveness based on viewport size!
 function navHeightResize() {
   let viewportHeight = $(window).height();
@@ -11,72 +12,10 @@ function navHeightResize() {
   }
 }
 
-function pageTransition() {
-  var transDivDimensions = Math.sqrt(
-    Math.pow($(window).height(), 2) + Math.pow($(window).width(), 2)
-  ); // Uses the pythagorean theorem to calculate the dimensions of the div to perfectly cover the screen (because it is on a 45 degree angle)
-  $(".transition-div").width(transDivDimensions);
-  $(".transition-div").height(transDivDimensions);
-  $(".transition-div").hide();
-  $("body").css("overflow", "hidden");
-  $(".transition-div").slideToggle();
-  setTimeout(function () {
-    $(".transition-div").slideToggle();
-  }, 2000);
-}
-
-$(document).ready(function () {
-  // V V Controls the navbar hiding and showing with the correct Css
-  $(".transition-div").show();
-  $(".navexpanded").hide();
-
-  var navDecider = false; // false = navexpanded is closed, true = navexpanded is open
-
-  $(".navbar-toggler").click(function () {
-    $(".navexpanded").slideToggle();
-    navDecider = !navDecider;
-    $(".navexpanded").css("display", "flex");
-    if (navDecider == true) {
-      $("#navbar-toggler-navexpanded").css("margin-left", "20%");
-      $("#navbar-toggler-navexpanded").css("margin-right", "20%");
-      console.log($("#navbar-toggler-navexpanded").css("margin"));
-
-      $("body").addClass("no-scroll"); // Removes ability to scroll
-    } else {
-      $("body").removeClass("no-scroll"); // Adds back the ability to scroll
-    }
-
-    $(".navbar").slideToggle();
-    navHeightResize();
-  });
-
-  $(window).on("resize", function () {
-    // V V Navbar Height Responsiveness
-    navHeightResize();
-
-    // V V Div containing the arrow in index responsiveness (problem was that for some reason the div did not want to stay inside it's parent and share it's height with the other div, so I fixed it this way)
-    $(".captionDivIndex").css("height", function () {
-      var indexContainerHeight = $("div[label='text content area']").height();
-      var indextTextContainerHeight = $("#pIndexContentDiv").outerHeight(true);
-      var indexCaptionDivHeight =
-        indexContainerHeight - indextTextContainerHeight;
-      var indexCaptionDivHeightPercent =
-        (indexCaptionDivHeight / indexContainerHeight) * 100;
-      console.log("Working");
-      return indexCaptionDivHeightPercent + "%";
-    });
-  });
-
-  $(window).trigger("resize");
-
-  // V V Random Page Button
-  var prevPage;
-
-  $(".navbar-button").click(function () {
-    pageTransition();
-
-    setTimeout(function () {
-      var page = Math.floor(Math.random() * 7);
+// V V V Random Page Button
+var prevPage;
+function randomPage() {
+  var page = Math.floor(Math.random() * 7);
       while (prevPage == page) {
         page = Math.floor(Math.random() * 7);
         console.log("it was the same this amount of times");
@@ -112,6 +51,100 @@ $(document).ready(function () {
           break;
       }
       prevPage = page;
-    }, 3000);
+}
+
+// V V V Handles page switching animation (immediately after clicking the button, before the page is actually switched)
+function pageTransitionBeforeLoad(page) {
+  var transDivDimensions = Math.sqrt(
+    Math.pow($(window).height(), 2) + Math.pow($(window).width(), 2)
+  ); // Uses the pythagorean theorem to calculate the dimensions of the div to perfectly cover the screen (because it is on a 45 degree angle)
+
+  $(".transition-div").width(transDivDimensions); // Sets Height and Width of the div to fill more than the page itself
+  $(".transition-div").height(transDivDimensions);
+
+  $(".transition-div").hide(); // closes div so it goes from closed to open
+  $("body").addClass("no-scroll");  // disables scrolling
+  
+  $(".transition-div").slideToggle(
+    setTimeout( () => {
+      if (page == "Random Webpage") {
+        // randomPage();
+        console.log("Should have activated randomPage()");
+      } else {
+        // window.location.href = page;
+        console.log('Should have switched the page to ' + page);
+      }
+    }, 2000)
+  );
+}
+
+// function pageTransitionAfterLoad() {
+  
+// }
+
+
+
+$(document).ready(function () {
+  // V V Controls the navbar hiding and showing with the correct Css
+  $(".transition-div").hide();
+  $(".navexpanded").hide();
+
+  var navDecider = false; // false = navexpanded is closed, true = navexpanded is open
+
+  $(".navbar-toggler").click(function () {
+    $(".navexpanded").slideToggle();
+    navDecider = !navDecider;
+    $(".navexpanded").css("display", "flex");
+    if (navDecider == true) {
+      $("#navbar-toggler-navexpanded").css("margin-left", "20%");
+      $("#navbar-toggler-navexpanded").css("margin-right", "20%");
+      console.log($("#navbar-toggler-navexpanded").css("margin"));
+
+      $("body").addClass("no-scroll"); // Removes ability to scroll
+    } else {
+      $("body").removeClass("no-scroll"); // Adds back the ability to scroll
+    }
+
+    $(".navbar").slideToggle();
+
+    navHeightResize();
+  });
+
+  $(window).on("resize", function () {
+    // V V Navbar Height Responsiveness
+    navHeightResize();
+
+    // V V Div containing the arrow in index responsiveness (problem was that for some reason the div did not want to stay inside it's parent and share it's height with the other div, so I fixed it this way)
+    $(".captionDivIndex").css("height", function () {
+      var indexContainerHeight = $("div[label='text content area']").height();
+      var indextTextContainerHeight = $("#pIndexContentDiv").outerHeight(true);
+      var indexCaptionDivHeight =
+        indexContainerHeight - indextTextContainerHeight;
+      var indexCaptionDivHeightPercent =
+        (indexCaptionDivHeight / indexContainerHeight) * 100;
+      return indexCaptionDivHeightPercent + "%";
+    });
+  });
+
+  $(window).trigger("resize");
+
+  // V V V V of Document Ready
+});
+$(".active").each( function() {
+  $(this).on("click", function() {
+    var href = $(this).text();
+    console.log(href.charAt(0));
+    if (href == "Random Webpage") {
+      // do nothing (*jazz hands*)
+    } else if (href == "Home") {
+      href = "index.html";
+    } else {
+      href = href.charAt(0).toLowerCase() + href.slice(1);
+      href = href + ".html";
+      href = href.replaceAll(" ", "");
+    }
+    console.log(href);
+
+    pageTransitionBeforeLoad(href);
   });
 });

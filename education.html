@@ -26,7 +26,7 @@
         <nav class="navColor navbar navbar-expand-sm" id="navbar">
             <div class="container-fluid" style="color: white">
                 <span class="collapse navbar-collapse">
-                    <button class="navbar-button">Random Webpage</button>
+                    <button class="navbar-button active">Random Webpage</button>
                 </span>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,19 +41,21 @@
                             <a class="nav-link active" href="about.html">About</a>
                         </li>
                         <li class="nav-link">
-                            <a class="nav-link active" href="Education.html">Education</a>
+                            <a class="nav-link active" href="education.html">Education</a>
                         </li>
-                        <li class="nav-link active">
+                        <li class="nav-link">
                             <a class="nav-link active" href="work.html">Work</a>
                         </li>
-                        <li class="nav-link active">
+                        <li class="nav-link">
                             <a class="nav-link active" href="interests.html">Interests</a>
                         </li>
-                        <li class="nav-link active">
+                        <li class="nav-link">
                             <a class="nav-link active" href="contact.html">Contact</a>
                         </li>
-                        <li class="nav-link active">
-                            <a class="nav-link active" href="quickMaths.html">Quick Maths</a>
+                        <li class="nav-link">
+                            <button class="nav-link active" href="quickMaths.html">
+                                Quick Maths
+                            </button>
                         </li>
                     </ul>
                 </div>
@@ -75,20 +77,20 @@
                 <li class="nav-link">
                     <a class="nav-link active" href="Education.html">Education</a>
                 </li>
-                <li class="nav-link active">
+                <li class="nav-link">
                     <a class="nav-link active" href="work.html">Work</a>
                 </li>
-                <li class="nav-link active">
+                <li class="nav-link">
                     <a class="nav-link active" href="interests.html">Interests</a>
                 </li>
-                <li class="nav-link active">
+                <li class="nav-link">
                     <a class="nav-link active" href="contact.html">Contact</a>
                 </li>
-                <li class="nav-link active">
+                <li class="nav-link">
                     <a class="nav-link active" href="quickMaths.html">Quick Maths</a>
                 </li>
-                <li class="nav-link active">
-                    <button class="navbar-button">Random Webpage</button>
+                <li class="nav-link">
+                    <a class="navbar-button">Random Webpage</a>
                 </li>
             </ul>
         </div>
@@ -101,18 +103,25 @@
     </div>
     <div class="container-fluid content-area">
         <div class="row">
-            <div class="col-sm-6" style="position: relative;">
-                <h1 class="my-5" id="h1IndexContent">What is this place?</h1>
-                <p class="my-5 pIndexContent">
-                    Hi I’m Sergio Espinal and this is my 2023 portfolio website. In this
-                    website I work on homing in on my skills while simultaneously
-                    completing a project. I talk about myself, the college I will likely
-                    be going to, and my past works. This website will be the homeland
-                    for the rest of my webpages so I put in some of my best effort into
-                    the website.
-                </p>
-                <p class="imgCaption pIndexContent">This is one of my projects</p>
-                <img class="captionArrow" src="Imgs/arrow-icon-arrows-sign-black-arrows-free-png.webp" alt="arrow">
+            <div class="col-sm-6" label="text content area" style="overflow: hidden">
+                <div id="pIndexContentDiv">
+                    <h1 class="my-5" id="h1IndexContent">What is this place?</h1>
+                    <p class="mt-5 pIndexContent">
+                        Hi I’m Sergio Espinal and this is my 2023 portfolio website. In
+                        this website I work on homing in on my skills while simultaneously
+                        completing a project. I talk about myself, the college I will
+                        likely be going to, and my past works. This website will be the
+                        homeland for the rest of my webpages so I put in some of my best
+                        effort into the website.
+                    </p>
+                </div>
+                <div class="captionDivIndex">
+                    <div class="captionWrapperIndex" style="text-align: right">
+                        <p class="imgCaption pIndexContent">This is one of my projects</p>
+                        <img class="captionArrow" src="Imgs/arrow-icon-arrows-sign-black-arrows-free-png.webp"
+                            alt="arrow" />
+                    </div>
+                </div>
             </div>
             <div class="col-sm-6 indexImg">
                 <img src="Imgs/TipCalcSS.png" alt="TipCalcSS" />
@@ -125,7 +134,7 @@
         <!-- Grid container -->
         <div class="container p-4 pb-0">
             <!-- Section: Links -->
-            <section class="">
+            <section>
                 <!--Grid row-->
                 <div class="row">
                     <!-- Grid column -->
@@ -134,10 +143,10 @@
                             What is this place?
                         </h6>
                         <p>
-                            Hi I’m Sergio Espinal and this is my 2023 portfolio website. In this
-                            website I work on homing in on my skills while simultaneously
-                            completing a project. I talk about myself, the college I will likely
-                            be going to, and my past works.
+                            Hi I’m Sergio Espinal and this is my 2023 portfolio website. In
+                            this website I work on homing in on my skills while
+                            simultaneously completing a project. I talk about myself, the
+                            college I will likely be going to, and my past works.
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -146,7 +155,9 @@
 
                     <!-- Grid column -->
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <h6 class="text-uppercase mb-4 font-weight-bold">Languages and libraries used</h6>
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            Languages and libraries used
+                        </h6>
                         <p>
                             <a class="text-white footer-notlink">HTML</a>
                         </p>
@@ -172,9 +183,7 @@
 
                     <!-- Grid column -->
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <h6 class="text-uppercase mb-4 font-weight-bold">
-                            Pages
-                        </h6>
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Pages</h6>
                         <p>
                             <a href="index.html" class="text-white">Home</a>
                         </p>
@@ -215,7 +224,7 @@
             </section>
             <!-- Section: Links -->
 
-            <hr class="my-3">
+            <hr class="my-3" />
 
             <!-- Section: Copyright -->
             <section class="p-3 pt-0">

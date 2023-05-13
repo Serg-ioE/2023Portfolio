@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
 
     <!-- V V Essential Link Rels V V-->
     <link rel="stylesheet" href="Style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- V V Fonts V V-->
     <link rel="stylesheet" href="https://use.typekit.net/ima8vml.css" />
@@ -19,224 +25,303 @@
     <!-- V V Scripts at the top for some reason idk V V-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="flex-tape">
-        <nav class="navColor navbar navbar-expand-sm" id="navbar">
-            <div class="container-fluid" style="color: white">
-                <span class="collapse navbar-collapse">
-                    <button class="navbar-button">Random Webpage</button>
-                </span>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-angles-down" style="color: white"></i>
-                </button>
-                <div class="fullWidth collapse navbar-collapse" id="flexGrowNo">
-                    <ul class="fullWidth navbar-nav">
-                        <li class="navRight nav-link">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-link">
-                            <a class="nav-link active" href="about.html">About</a>
-                        </li>
-                        <li class="nav-link">
-                            <a class="nav-link active" href="Education.html">Education</a>
-                        </li>
-                        <li class="nav-link active">
-                            <a class="nav-link active" href="work.html">Work</a>
-                        </li>
-                        <li class="nav-link active">
-                            <a class="nav-link active" href="interests.html">Interests</a>
-                        </li>
-                        <li class="nav-link active">
-                            <a class="nav-link active" href="contact.html">Contact</a>
-                        </li>
-                        <li class="nav-link active">
-                            <a class="nav-link active" href="quickMaths.html">Quick Maths</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="navexpanded navColor">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
-                id="navbar-toggler-navexpanded">
-                <i class="fa-solid fa-angles-down" style="color: white"></i>
-            </button>
+      <nav class="navColor navbar navbar-expand-sm" id="navbar">
+        <div class="container-fluid" style="color: white">
+          <span class="collapse navbar-collapse">
+            <button class="navbar-button active">Random Webpage</button>
+          </span>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-angles-down" style="color: white"></i>
+          </button>
+          <div class="fullWidth collapse navbar-collapse" id="flexGrowNo">
             <ul class="fullWidth navbar-nav">
-                <li class="nav-link">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-link">
-                    <a class="nav-link active" href="about.html">About</a>
-                </li>
-                <li class="nav-link">
-                    <a class="nav-link active" href="Education.html">Education</a>
-                </li>
-                <li class="nav-link active">
-                    <a class="nav-link active" href="work.html">Work</a>
-                </li>
-                <li class="nav-link active">
-                    <a class="nav-link active" href="interests.html">Interests</a>
-                </li>
-                <li class="nav-link active">
-                    <a class="nav-link active" href="contact.html">Contact</a>
-                </li>
-                <li class="nav-link active">
-                    <a class="nav-link active" href="quickMaths.html">Quick Maths</a>
-                </li>
-                <li class="nav-link active">
-                    <button class="navbar-button">Random Webpage</button>
-                </li>
+              <li class="navRight nav-link">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-link">
+                <a class="nav-link active" href="about.html">About</a>
+              </li>
+              <li class="nav-link">
+                <a class="nav-link active" href="education.html">Education</a>
+              </li>
+              <li class="nav-link">
+                <a class="nav-link active" href="work.html">Work</a>
+              </li>
+              <li class="nav-link">
+                <a class="nav-link active" href="interests.html">Interests</a>
+              </li>
+              <li class="nav-link">
+                <a class="nav-link active" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-link">
+                <a class="nav-link active" href="quickMaths.html">
+                  Quick Maths
+                </a>
+              </li>
             </ul>
+          </div>
         </div>
-        <div class="hero-image">
-            <div class="hero-text">
-                <h1>This is About</h1>
-                <p>Where I introduce myself</p>
-            </div>
+      </nav>
+      <div class="navexpanded navColor">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          id="navbar-toggler-navexpanded"
+        >
+          <i class="fa-solid fa-angles-down" style="color: white"></i>
+        </button>
+        <ul class="fullWidth navbar-nav">
+          <li class="nav-link">
+            <a class="nav-link active" aria-current="page" href="index.html"
+              >Home</a
+            >
+          </li>
+          <li class="nav-link">
+            <a class="nav-link active" href="about.html">About</a>
+          </li>
+          <li class="nav-link">
+            <a class="nav-link active" href="education.html">Education</a>
+          </li>
+          <li class="nav-link">
+            <a class="nav-link active" href="work.html">Work</a>
+          </li>
+          <li class="nav-link">
+            <a class="nav-link active" href="interests.html">Interests</a>
+          </li>
+          <li class="nav-link">
+            <a class="nav-link active" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-link">
+            <a class="nav-link active" href="quickMaths.html">Quick Maths</a>
+          </li>
+          <li class="nav-link">
+            <a class="navbar-button">Random Webpage</a>
+          </li>
+        </ul>
+      </div>
+      <div class="hero-image">
+        <div class="hero-text">
+          <h1>This is About Me</h1>
+          <p>Where I talk about myself</p>
         </div>
+      </div>
     </div>
     <div class="container-fluid content-area">
-        <div class="row">
-            <div class="col-sm-6" style="position: relative;">
-                <h1 class="my-5" id="h1IndexContent">What is this place?</h1>
-                <p class="my-5 pIndexContent">
-                    Hi I’m Sergio Espinal and this is my 2023 portfolio website. In this
-                    website I work on homing in on my skills while simultaneously
-                    completing a project. I talk about myself, the college I will likely
-                    be going to, and my past works. This website will be the homeland
-                    for the rest of my webpages so I put in some of my best effort into
-                    the website.
-                </p>
-                <p class="imgCaption pIndexContent">This is one of my projects</p>
-                <img class="captionArrow" src="Imgs/arrow-icon-arrows-sign-black-arrows-free-png.webp" alt="arrow">
-            </div>
-            <div class="col-sm-6 indexImg">
-                <img src="Imgs/TipCalcSS.png" alt="TipCalcSS" />
-            </div>
+      <div class="row">
+        <div class="col-sm-6" label="text content area">
+          <div id="pIndexContentDiv">
+            <h1 class="my-5" id="h1IndexContent">Who am I?</h1>
+            <p class="mt-5 pIndexContent" doc="about">
+                Hello, and welcome to my website! My name is Sergio Espinal, and
+              I'm a 17-year-old high school student who's passionate about web
+              design. I was born in Perth Amboy, New Jersey, and I have two
+              siblings - a freshman brother named Justin and a fourth-grade
+              sister named Liviana.
+            </p>
+            <p class="mt-5 pIndexContent" doc="about">
+                As a Hispanic American, my family's cultural background is very
+              important to me. Although I don't speak Spanish fluently, I love
+              eating Spanish foods and learning about the customs and traditions
+              of Puerto Rico and the Dominican Republic - the birthplaces of my
+              parents.
+            </p>
+            <p class="mt-5 pIndexContent" doc="about">
+                I'm currently taking a Web Design class in high school, which has
+              inspired me to create this website. I've always been interested in
+              technology and design, and this class has allowed me to explore
+              those interests in a hands-on way. I'm learning a lot about
+              different aspects of web design, including HTML, CSS, and
+              JavaScript, and I'm excited to continue honing my skills in this
+              field.
+            </p>
+            <p class="mt-5 pIndexContent" doc="about">
+                Of course I alway love hanging out and doing things with my
+              friends. We always have so much fun together and we are always
+              there for each other during tough times. We often game together
+              and we get horrifically destroyed at whatever we are playing.
+              However in the end, the boys always come out on top.
+            </p>
+          </div>
         </div>
+        <div class="col-sm-6">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="Imgs/FamilyPhoto1.jpeg" class="d-block" alt="First Image">
+                </div>
+                <div class="carousel-item">
+                  <img src="imgs/SergWitFriends3.png" class="d-block" alt="Second Image">
+                </div>
+                <div class="carousel-item">
+                  <img src="Imgs/GoofySerg1.jpeg" class="d-block" alt="Third Image">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div id="imgsAboutPage">
+              <div v-for="img of aboutImgs"><img class="about-imgs" :src="img.link" :alt="img.title"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Remove the container if you want to extend the Footer to full width. -->
     <!-- Footer -->
-    <footer class="text-center text-lg-start text-white" style="background-color: #2c2c2c">
-        <!-- Grid container -->
-        <div class="container p-4 pb-0">
-            <!-- Section: Links -->
-            <section class="">
-                <!--Grid row-->
-                <div class="row">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                        <h6 class="text-uppercase mb-4 font-weight-bold">
-                            What is this place?
-                        </h6>
-                        <p>
-                            Hi I’m Sergio Espinal and this is my 2023 portfolio website. In this
-                            website I work on homing in on my skills while simultaneously
-                            completing a project. I talk about myself, the college I will likely
-                            be going to, and my past works.
-                        </p>
-                    </div>
-                    <!-- Grid column -->
+    <footer
+      class="text-center text-lg-start text-white"
+      style="background-color: #2c2c2c"
+    >
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section>
+          <!--Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                What is this place?
+              </h6>
+              <p>
+                Hi I’m Sergio Espinal and this is my 2023 portfolio website. In
+                this website I work on homing in on my skills while
+                simultaneously completing a project. I talk about myself, the
+                college I will likely be going to, and my past works.
+              </p>
+            </div>
+            <!-- Grid column -->
 
-                    <hr class="w-100 clearfix d-md-none" />
+            <hr class="w-100 clearfix d-md-none" />
 
-                    <!-- Grid column -->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <h6 class="text-uppercase mb-4 font-weight-bold">Languages and libraries used</h6>
-                        <p>
-                            <a class="text-white footer-notlink">HTML</a>
-                        </p>
-                        <p>
-                            <a class="text-white footer-notlink">CSS</a>
-                        </p>
-                        <p>
-                            <a class="text-white footer-notlink">Javascript</a>
-                        </p>
-                        <p>
-                            <a class="text-white footer-notlink">Bootstrap</a>
-                        </p>
-                        <p>
-                            <a class="text-white footer-notlink">Jquery</a>
-                        </p>
-                        <p>
-                            <a class="text-white footer-notlink">Vue Js</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                Languages and libraries used
+              </h6>
+              <p>
+                <a class="text-white footer-notlink">HTML</a>
+              </p>
+              <p>
+                <a class="text-white footer-notlink">CSS</a>
+              </p>
+              <p>
+                <a class="text-white footer-notlink">Javascript</a>
+              </p>
+              <p>
+                <a class="text-white footer-notlink">Bootstrap</a>
+              </p>
+              <p>
+                <a class="text-white footer-notlink">Jquery</a>
+              </p>
+              <p>
+                <a class="text-white footer-notlink">Vue Js</a>
+              </p>
+            </div>
+            <!-- Grid column -->
 
-                    <hr class="w-100 clearfix d-md-none" />
+            <hr class="w-100 clearfix d-md-none" />
 
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <h6 class="text-uppercase mb-4 font-weight-bold">
-                            Pages
-                        </h6>
-                        <p>
-                            <a href="index.html" class="text-white">Home</a>
-                        </p>
-                        <p>
-                            <a href="about.html" class="text-white">About</a>
-                        </p>
-                        <p>
-                            <a href="Education.html" class="text-white">Education</a>
-                        </p>
-                        <p>
-                            <a href="work.html" class="text-white">Work</a>
-                        </p>
-                        <p>
-                            <a href="interests.html" class="text-white">Interests</a>
-                        </p>
-                        <p>
-                            <a href="contact.html" class="text-white">Contact</a>
-                        </p>
-                        <p>
-                            <a href="quickMaths.html" class="text-white">Quick Maths</a>
-                        </p>
-                    </div>
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Pages</h6>
+              <p>
+                <a href="index.html" class="text-white">Home</a>
+              </p>
+              <p>
+                <a href="about.html" class="text-white">About</a>
+              </p>
+              <p>
+                <a href="Education.html" class="text-white">Education</a>
+              </p>
+              <p>
+                <a href="work.html" class="text-white">Work</a>
+              </p>
+              <p>
+                <a href="interests.html" class="text-white">Interests</a>
+              </p>
+              <p>
+                <a href="contact.html" class="text-white">Contact</a>
+              </p>
+              <p>
+                <a href="quickMaths.html" class="text-white">Quick Maths</a>
+              </p>
+            </div>
 
-                    <!-- Grid column -->
-                    <hr class="w-100 clearfix d-md-none" />
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none" />
 
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                        <p><i class="fas fa-home mr-3"></i> New Jersey, USA, Earth</p>
-                        <p><i class="fas fa-envelope mr-3"></i> espinalJrs@gmail.com</p>
-                        <p><i class="fas fa-phone mr-3"></i> 800 888 8888</p>
-                        <p><i class="fas fa-code mr-3"></i> Serg-ioE</p>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!--Grid row-->
-            </section>
-            <!-- Section: Links -->
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+              <p><i class="fas fa-home mr-3"></i> New Jersey, USA, Earth</p>
+              <p><i class="fas fa-envelope mr-3"></i> espinalJrs@gmail.com</p>
+              <p><i class="fas fa-phone mr-3"></i> 800 888 8888</p>
+              <p><i class="fas fa-code mr-3"></i> Serg-ioE</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
 
-            <hr class="my-3">
+        <hr class="my-3" />
 
-            <!-- Section: Copyright -->
-            <section class="p-3 pt-0">
-                <div class="row d-flex align-items-center">
-                    <!-- Grid column -->
-                    <div class="col-md-12 col-lg-12 text-center text-md-start">
-                        <!-- Copyright -->
-                        <div class="p-3">
-                            © 2020 Copyright:
-                            <a class="text-white">MDBootstrap.com</a>
-                        </div>
-                        <!-- Copyright -->
-                    </div>
-                </div>
-            </section>
-            <!-- Section: Copyright -->
-        </div>
-        <!-- Grid container -->
+        <!-- Section: Copyright -->
+        <section class="p-3 pt-0">
+          <div class="row d-flex align-items-center">
+            <!-- Grid column -->
+            <div class="col-md-12 col-lg-12 text-center text-md-start">
+              <!-- Copyright -->
+              <div class="p-3">
+                © 2020 Copyright:
+                <a class="text-white">MDBootstrap.com</a>
+              </div>
+              <!-- Copyright -->
+            </div>
+          </div>
+        </section>
+        <!-- Section: Copyright -->
+      </div>
+      <!-- Grid container -->
     </footer>
     <!-- Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>

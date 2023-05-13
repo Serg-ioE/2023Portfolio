@@ -53,40 +53,16 @@ function randomPage() {
       prevPage = page;
 }
 
-// V V V Handles page switching animation (immediately after clicking the button, before the page is actually switched)
-function pageTransitionBeforeLoad(page) {
-  var transDivDimensions = Math.sqrt(
-    Math.pow($(window).height(), 2) + Math.pow($(window).width(), 2)
-  ); // Uses the pythagorean theorem to calculate the dimensions of the div to perfectly cover the screen (because it is on a 45 degree angle)
-
-  $(".transition-div").width(transDivDimensions); // Sets Height and Width of the div to fill more than the page itself
-  $(".transition-div").height(transDivDimensions);
-
-  $(".transition-div").hide(); // closes div so it goes from closed to open
-  $("body").addClass("no-scroll");  // disables scrolling
-  
-  $(".transition-div").slideToggle(
-    setTimeout( () => {
-      if (page == "Random Webpage") {
-        // randomPage();
-        console.log("Should have activated randomPage()");
-      } else {
-        // window.location.href = page;
-        console.log('Should have switched the page to ' + page);
-      }
-    }, 2000)
-  );
-}
-
-// function pageTransitionAfterLoad() {
-  
-// }
-
 
 
 $(document).ready(function () {
+  // V V Assigns the doc attribute to every html element on each page to whatever page they are on ex: doc = "about"
+  var path = window.location.pathname;
+  var page = path.split("/").pop();
+  $("*").attr("doc", page);
+
+
   // V V Controls the navbar hiding and showing with the correct Css
-  $(".transition-div").hide();
   $(".navexpanded").hide();
 
   var navDecider = false; // false = navexpanded is closed, true = navexpanded is open
@@ -117,9 +93,9 @@ $(document).ready(function () {
     // V V Div containing the arrow in index responsiveness (problem was that for some reason the div did not want to stay inside it's parent and share it's height with the other div, so I fixed it this way)
     $(".captionDivIndex").css("height", function () {
       var indexContainerHeight = $("div[label='text content area']").height();
-      var indextTextContainerHeight = $("#pIndexContentDiv").outerHeight(true);
+      var indexTextContainerHeight = $("#pIndexContentDiv").outerHeight(true);
       var indexCaptionDivHeight =
-        indexContainerHeight - indextTextContainerHeight;
+        indexContainerHeight - indexTextContainerHeight;
       var indexCaptionDivHeightPercent =
         (indexCaptionDivHeight / indexContainerHeight) * 100;
       return indexCaptionDivHeightPercent + "%";
@@ -128,23 +104,21 @@ $(document).ready(function () {
 
   $(window).trigger("resize");
 
-  // V V V V of Document Ready
+  // V V V V End of Document Ready
 });
-$(".active").each( function() {
-  $(this).on("click", function() {
-    var href = $(this).text();
-    console.log(href.charAt(0));
-    if (href == "Random Webpage") {
-      // do nothing (*jazz hands*)
-    } else if (href == "Home") {
-      href = "index.html";
-    } else {
-      href = href.charAt(0).toLowerCase() + href.slice(1);
-      href = href + ".html";
-      href = href.replaceAll(" ", "");
-    }
-    console.log(href);
 
-    pageTransitionBeforeLoad(href);
-  });
-});
+
+// V V V V Made Vue app for displaying images above sm(bootstrap breakpoint) in about.html
+const imgsAboutPage = Vue.createApp({
+  data() {
+    return {
+      aboutImgs: [
+        { link: "Imgs/FamilyPhoto1.jpeg", title: "FamilyPhoto1" },
+        { link: "Imgs/SergWitFriends1.jpeg", title: "SergWitFriends1" },
+        { link: "imgs/SergWitFriends3.png", title: "SergWitFriends3" },
+      ],
+    };
+  },
+})
+
+imgsAboutPage.mount("#imgsAboutPage")

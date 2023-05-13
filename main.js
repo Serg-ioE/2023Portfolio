@@ -93,7 +93,7 @@ $(document).ready(function () {
     // V V Div containing the arrow in index responsiveness (problem was that for some reason the div did not want to stay inside it's parent and share it's height with the other div, so I fixed it this way)
     $(".captionDivIndex").css("height", function () {
       var indexContainerHeight = $("div[label='text content area']").height();
-      var indexTextContainerHeight = $("#pIndexContentDiv").outerHeight(true);
+      var indexTextContainerHeight = $("#pContentDiv").outerHeight(true);
       var indexCaptionDivHeight =
         indexContainerHeight - indexTextContainerHeight;
       var indexCaptionDivHeightPercent =

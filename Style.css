@@ -147,7 +147,7 @@ nav {
   font-size: 2vw;
 }
 
-#pIndexContentDiv {
+#pContentDiv {
   margin-top: 3.25%;
   margin-bottom: 3.25%;
   height: auto;
@@ -245,7 +245,7 @@ img[alt="TipCalcSS"] {
     z-index: 1;
 }
 
-.about-imgs[doc="about.html"] {
+.medium-imgs[doc="about.html"] {
   margin: 30px 20%;
   max-width: 60%;
   height: auto;
@@ -260,13 +260,45 @@ img[alt="TipCalcSS"] {
 
 /* V V V Education specific Css V V V */
 
+#pContentDiv[doc="education.html"] {
+  font-size: 1.75vw;
+}
+
+.hero-image[doc="education.html"] {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("Imgs/StevensHero.jpg");
+}
+
+.stevens-logo[doc="education.html"] {
+  position: absolute;
+    top: 70%;
+    left: 13%;
+  max-width: 12%;
+}
+
+.stevens-logo img[doc="education.html"]{
+  width: 100%;
+  height: auto;
+}
+
+.medium-imgs[doc="education.html"] {
+  margin: 35% 10%;
+  max-width: 80%;
+  height: auto;
+  border-radius: 10%;
+}
+
 /* ^ ^ ^ Education specific Css ^ ^ ^ */
 
 
 
 /* V V V Media Query for everything (bootstrap-sm breakpoint)(When screen width <= 576px it is activated) V V V */
 @media screen and (max-width: 576px) {
-.carousel[doc="about.html"] {
+  .medium-imgs[doc="education.html"] {
+    display: none;
+  }
+
+  .carousel[doc="about.html"] {
     display: block;
   }
 

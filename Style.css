@@ -367,6 +367,20 @@ h3[doc="contact.html"] {
 
 /* ^ ^ ^ Contact specific Css ^ ^ ^ */
 
+/* V V V Quick Math specific Css V V V */
+
+.hero-image[doc="quickMaths.html"] {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("Imgs/quick-maths-mans-not-hot.gif");
+}
+
+#mathInstruct[doc="quickMaths.html"] {
+  position: absolute;
+  font-size: 2vw;
+} 
+
+/* ^ ^ ^ Quick Math specific Css ^ ^ ^ */
+
 /* V V V Media Query for everything (bootstrap-sm breakpoint)(When screen width <= 576px it is activated) V V V */
 @media screen and (max-width: 576px) {
   .col-sm-4[doc="interests.html"] {

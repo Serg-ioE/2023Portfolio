@@ -133,6 +133,8 @@ if (pageGlobal == "about.html") {
   imgsAboutPage.mount("#imgsAboutPage");
 }
 
+
+// V V V V Builds The work page and makes nested objects for vue-for
 if (pageGlobal == "work.html") {
   const workContent = Vue.createApp({
     data() {
@@ -204,4 +206,23 @@ if (pageGlobal == "work.html") {
   });
 
   workContent.mount("#work-content-area");
+}
+
+if (pageGlobal == "quickMaths.html") {
+  const quickMaths = Vue.createApp({
+    data () {
+      return {
+        answer1,
+        answer2,
+        answer3,
+        answer4,
+        mathQuestion
+      }
+    },
+    methods: {
+
+    }
+  })
+
+  quickMaths.mount("#vueController");
 }

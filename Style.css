@@ -334,6 +334,39 @@ div#interest-text .col-sm-4[doc="interests.html"] {
 
 /* ^ ^ ^ Interests specific Css ^ ^ ^ */
 
+/* V V V Contact specific Css V V V */
+
+.col-sm-4 img[doc="contact.html"], .col-sm-4 div.phone-icon[doc="contact.html"] {
+  max-width: 40%;
+  min-width: 30%;
+  display: block;
+  margin: 10% auto;
+}
+
+.col-sm-4 i[doc="contact.html"] {
+  font-size: 10vw;
+}
+
+.col-sm-4[doc="contact.html"] {
+  font-size: 1.4vw;
+  text-align: center;
+}
+
+h3[doc="contact.html"] {
+  font-size: 1.9vw !important;
+}
+
+.col-sm-4 a.active[doc="contact.html"] {
+  text-decoration: none;
+  color: #fff;
+}
+
+.col-sm-4 a.active:hover[doc="contact.html"] {
+  text-decoration: underline;
+}
+
+/* ^ ^ ^ Contact specific Css ^ ^ ^ */
+
 /* V V V Media Query for everything (bootstrap-sm breakpoint)(When screen width <= 576px it is activated) V V V */
 @media screen and (max-width: 576px) {
   .col-sm-4[doc="interests.html"] {

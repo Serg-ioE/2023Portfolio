@@ -269,18 +269,6 @@ img[alt="TipCalcSS"] {
     url("Imgs/StevensHero.jpg");
 }
 
-.stevens-logo[doc="education.html"] {
-  position: absolute;
-    top: 70%;
-    left: 13%;
-  max-width: 12%;
-}
-
-.stevens-logo img[doc="education.html"]{
-  width: 100%;
-  height: auto;
-}
-
 .medium-imgs[doc="education.html"] {
   margin: 35% 10%;
   max-width: 80%;
@@ -290,10 +278,77 @@ img[alt="TipCalcSS"] {
 
 /* ^ ^ ^ Education specific Css ^ ^ ^ */
 
+/* V V V Work specific Css V V V */
 
+.medium-imgs[doc="work.html"] {
+  max-width: 100%;
+  height: 400px;
+  border-radius: 5%;
+  object-fit: cover;
+  object-position: center;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #fff;
+  transition: 5s;
+}
+
+.no-pad[doc="work.html"] {
+  padding: 0;
+  min-height: 1500px;
+}
+
+.medium-imgs[doc="work.html"]:hover {
+  border-color:#696969;
+  transform: translate(0px, -20px);
+}
+
+/* ^ ^ ^ work specific Css ^ ^ ^ */
+
+/* V V V Interests specific Css V V V */
+
+.col-sm-4 img[doc="interests.html"] {
+  max-width: 70%;
+  min-width: 30%;
+  display: block;
+  margin: 10% auto;
+  border-radius: 50%;
+}
+
+.col-sm-4[doc="interests.html"] {
+  font-size: 1.4vw;
+}
+
+h3[doc="interests.html"] {
+  font-size: 1.9vw !important;
+}
+
+div#interest-text .col-sm-4[doc="interests.html"] {
+  display: grid;
+  place-items: center;
+}
+
+.hero-image[doc="interests.html"] {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("Imgs/marvelComicBackground.jpg");
+}
+
+/* ^ ^ ^ Interests specific Css ^ ^ ^ */
 
 /* V V V Media Query for everything (bootstrap-sm breakpoint)(When screen width <= 576px it is activated) V V V */
 @media screen and (max-width: 576px) {
+  .col-sm-4[doc="interests.html"] {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  h3[doc="interests.html"] {
+    font-size: 30px !important;
+  }
+  
+  .col-sm-4 img[doc="interests.html"] {
+    display: none;
+  }
+  
   .medium-imgs[doc="education.html"] {
     display: none;
   }

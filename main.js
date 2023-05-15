@@ -1,3 +1,9 @@
+// V V V V Initializes animations for work page
+AOS.init();
+
+// V V V V gets the name of the page
+var pathGlobal = window.location.pathname;
+var pageGlobal = pathGlobal.split("/").pop();
 
 // V V V Used for custom Responsiveness based on viewport size!
 function navHeightResize() {
@@ -16,43 +22,47 @@ function navHeightResize() {
 var prevPage;
 function randomPage() {
   var page = Math.floor(Math.random() * 7);
-      while (prevPage == page) {
-        page = Math.floor(Math.random() * 7);
-        console.log("it was the same this amount of times");
-      }
-      switch (page) {
-        case 0:
-          window.location.href = "index.html";
-          console.log("index");
-          break;
-        case 1:
-          window.location.href = "about.html";
-          console.log("about");
-          break;
-        case 2:
-          window.location.href = "education.html";
-          console.log("education");
-          break;
-        case 3:
-          window.location.href = "work.html";
-          console.log("work");
-          break;
-        case 4:
-          window.location.href = "interests.html";
-          console.log("interests");
-          break;
-        case 5:
-          window.location.href = "contact.html";
-          console.log("contact");
-          break;
-        case 6:
-          window.location.href = "quickMaths.html";
-          console.log("quickMaths");
-          break;
-      }
-      prevPage = page;
+  while (prevPage == page) {
+    page = Math.floor(Math.random() * 7);
+    console.log("it was the same this amount of times");
+  }
+  switch (page) {
+    case 0:
+      window.location.href = "index.html";
+      console.log("index");
+      break;
+    case 1:
+      window.location.href = "about.html";
+      console.log("about");
+      break;
+    case 2:
+      window.location.href = "education.html";
+      console.log("education");
+      break;
+    case 3:
+      window.location.href = "work.html";
+      console.log("work");
+      break;
+    case 4:
+      window.location.href = "interests.html";
+      console.log("interests");
+      break;
+    case 5:
+      window.location.href = "contact.html";
+      console.log("contact");
+      break;
+    case 6:
+      window.location.href = "quickMaths.html";
+      console.log("quickMaths");
+      break;
+  }
+  prevPage = page;
 }
 
+let randomButton = $('.navbar-button:contains("Random Webpage")');
+randomButton.click(function() {
+  randomPage();
+});
 
 
 $(document).ready(function () {
@@ -60,7 +70,6 @@ $(document).ready(function () {
   var path = window.location.pathname;
   var page = path.split("/").pop();
   $("*").attr("doc", page);
-
 
   // V V Controls the navbar hiding and showing with the correct Css
   $(".navexpanded").hide();
@@ -107,18 +116,92 @@ $(document).ready(function () {
   // V V V V End of Document Ready
 });
 
-
 // V V V V Made Vue app for displaying images above sm(bootstrap breakpoint) in about.html
-const imgsAboutPage = Vue.createApp({
-  data() {
-    return {
-      aboutImgs: [
-        { link: "Imgs/FamilyPhoto1.jpeg", title: "FamilyPhoto1" },
-        { link: "Imgs/SergWitFriends1.jpeg", title: "SergWitFriends1" },
-        { link: "imgs/SergWitFriends3.png", title: "SergWitFriends3" },
-      ],
-    };
-  },
-})
+if (pageGlobal == "about.html") {
+  const imgsAboutPage = Vue.createApp({
+    data() {
+      return {
+        aboutImgs: [
+          { link: "Imgs/FamilyPhoto1.jpeg", title: "FamilyPhoto1" },
+          { link: "Imgs/SergWitFriends1.jpeg", title: "SergWitFriends1" },
+          { link: "imgs/SergWitFriends3.png", title: "SergWitFriends3" },
+        ],
+      };
+    },
+  });
 
-imgsAboutPage.mount("#imgsAboutPage")
+  imgsAboutPage.mount("#imgsAboutPage");
+}
+
+if (pageGlobal == "work.html") {
+  const workContent = Vue.createApp({
+    data() {
+      return {
+        columns: [
+          {
+            number: 1,
+            projImgs: [
+              {
+                sources: "Imgs/DadJokeSiteSS.png",
+                overlapText: "Dad Joke Site",
+                link: "https://serg-ioe.github.io/Dad-Jokes/",
+              },
+              {
+                sources: "Imgs/JS4SS.png",
+                overlapText: "The Jive Factory",
+                link: "https://serg-ioe.github.io/Javascript-4/",
+              },
+              {
+                sources: "Imgs/WoodenToysSiteSS.png",
+                overlapText: "Wooden Toys Website",
+                link: "https://serg-ioe.github.io/Wooden-Toys-website/",
+              },
+            ],
+          },
+          {
+            number: 2,
+            projImgs: [
+              {
+                sources: "Imgs/KatiesKometsSS.png",
+                overlapText: "Katie's Komets",
+                link: "https://serg-ioe.github.io/Katies-Komets/",
+              },
+              {
+                sources: "Imgs/MarvelSiteSS.png",
+                overlapText: "Marvel Characters",
+                link: "https://serg-ioe.github.io/NJIT2-Marvel-main/",
+              },
+              {
+                sources: "Imgs/MoviesSiteSS.png",
+                overlapText: "Movies' ratings",
+                link: "https://serg-ioe.github.io/NJIT-3_StarterFiles-master/",
+              },
+            ],
+          },
+          {
+            number: 3,
+            projImgs: [
+              {
+                sources: "Imgs/PostcardGenSS.png",
+                overlapText: "Postcard Generator",
+                link: "https://serg-ioe.github.io/Postcard-Generator/",
+              },
+              {
+                sources: "Imgs/RPSsiteSS.png",
+                overlapText: "Rock Paper Scissors",
+                link: "https://serg-ioe.github.io/RPS/",
+              },
+              {
+                sources: "Imgs/TipCalcSS.png",
+                overlapText: "Tip Calculator",
+                link: "https://serg-ioe.github.io/TipCalc/",
+              },
+            ],
+          },
+        ],
+      };
+    },
+  });
+
+  workContent.mount("#work-content-area");
+}
